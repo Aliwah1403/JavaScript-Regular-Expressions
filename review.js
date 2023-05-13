@@ -62,3 +62,30 @@ console.log(veatStr.match(eatRegex));
 let mixStr = "James007";
 let mixRegex = /[a-z0-9]/ig;
 console.log(mixStr.match(mixRegex));
+
+//negated set
+let negTest = "The 3 amigos";
+let negRegex = /[^aeiou]/ig;
+let negResult = negTest.match(negRegex);
+console.log(negResult);
+
+
+//consecutive character
+let consText = "Communicate";
+let consRegex = /m+/ig;
+let consResult = consText.match(consRegex);
+console.log(consResult);
+
+let footyWord = "goooooooal";
+let gPhrase = "gut feeling";
+let oPhrase = "over the moon";
+let goRegex = /go*/;
+console.log(footyWord.match(goRegex));
+console.log(gPhrase.match(goRegex));
+console.log(oPhrase.match(goRegex));
+
+
+let example = "titanic";
+let exaRegex = /t[a-z]*?i/;
+let exaResult = example.match(exaRegex);
+console.log(exaResult);
