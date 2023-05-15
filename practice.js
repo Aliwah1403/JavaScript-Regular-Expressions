@@ -139,3 +139,36 @@ console.log(testNum.match(numRegex));
 // match all non numbers
 let noNumRegex = /\D/g;
 console.log(testNum.match(noNumRegex));
+
+
+
+// Matching whitespace
+let sample = "Whitespace is important in seperating words";
+let countWhiteSpace = /\s/g;
+let spaceResult = sample.match(countWhiteSpace);
+console.log(spaceResult);
+
+let nonWhiteSpace = /\S/g;
+console.log(sample.match(nonWhiteSpace).length);
+
+
+
+// Specify upper and lower number of matches
+let ohStr = "Ohhh no";
+let ohRegex = /Oh{3,6} no/;
+console.log(ohRegex.test(ohStr));
+
+
+
+// specify only lower number of matches
+let A4 = "haaaah";
+let A2 = "haah";
+let A100 = "h" + "a".repeat(100) + "h";
+let multipleA = /ha{3,}h/;
+console.log(multipleA.test(A4));
+console.log(multipleA.test(A2));
+console.log(multipleA.test(A100));
+
+
+
+// specify exact number of matches
