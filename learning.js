@@ -270,3 +270,17 @@ console.log(longHand.test(numbers));
 console.log(shortHand.test(numbers));
 console.log(longHand.test(varNames));
 console.log(shortHand.test(varNames));
+
+
+
+// match everything but letters and numbers
+let shortHand2 = /\W/;
+let numbers2 = "42%";
+let sentence = "Coding!";
+console.log(numbers2.match(shortHand2));
+console.log(sentence.match(shortHand2));
+
+
+
+//matching only numbers
+// we use the (\d) shortcut

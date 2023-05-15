@@ -118,3 +118,24 @@ let quoteSample3 = "The five boxing wizards jump quickly";
 let alphabetRegexV2 = /\w/g;
 let alphaResult = quoteSample3.match(alphabetRegexV2).length;
 console.log(alphaResult)
+
+
+
+//match everything but letters and numbers
+let quoteSample4 = "The five boxing wizards jump quikcly";
+let nonAlphabetRegex = /\W/g;
+let nonAlphabetResult = quoteSample4.match(nonAlphabetRegex);
+console.log(nonAlphabetResult);
+
+
+
+//match all numbers
+let testNum = "2001: A Space Odessy";
+let numRegex = /\d/g;
+console.log(testNum.match(numRegex));
+
+
+
+// match all non numbers
+let noNumRegex = /\D/g;
+console.log(testNum.match(noNumRegex));
