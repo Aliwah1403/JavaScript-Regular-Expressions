@@ -89,3 +89,22 @@ let example = "titanic";
 let exaRegex = /t[a-z]*?i/;
 let exaResult = example.match(exaRegex);
 console.log(exaResult);
+
+
+let testFirst = "Mia has a dog";
+let testFirstRegex = /^Mia/i;
+console.log(testFirstRegex.test(testFirst));
+
+let notFirst = "Her name is Mia";
+console.log(testFirstRegex.test(notFirst));
+
+
+let testEnd = "That was a very nice story";
+let regexEnd = /story$/i;
+console.log(regexEnd.test(testEnd));
+
+let allItems = /\w+/;
+let numberItem = "42";
+let textItem = "importante"
+console.log(allItems.test(numberItem));
+console.log(allItems.test(textItem));
