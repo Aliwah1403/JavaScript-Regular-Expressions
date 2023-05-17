@@ -172,3 +172,15 @@ console.log(multipleA.test(A100));
 
 
 // specify exact number of matches
+let timStr = "Timmmmber";
+let timRegex = /Tim{4}ber/;
+console.log(timRegex.test(timStr));
+
+
+
+//check all or none
+let american = "color";
+let british = "colour";
+let rainbowRegex = /colou?r/;
+console.log(rainbowRegex.test(american));
+console.log(rainbowRegex.test(british));
