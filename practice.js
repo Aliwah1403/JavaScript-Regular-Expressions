@@ -184,3 +184,40 @@ let british = "colour";
 let rainbowRegex = /colou?r/;
 console.log(rainbowRegex.test(american));
 console.log(rainbowRegex.test(british));
+
+
+
+// positive and negative lookaheads
+let quit = "qu";
+let noquit = "qt";
+
+let quRegex = /q(?=u)/;
+//positive lookahead
+//  meaning "u" has to be in the string being searched
+
+let qRegex = /q(?!u)/;
+// negative lookahead
+// meaning it will check if "u" isnt there in the string
+
+console.log(quit.match(quRegex));
+console.log(noquit.match(qRegex));
+
+
+// password checker using lookahead
+// password should be greater than 5 characters long
+// password should have 2 consecutive digits
+let sampleWord = "astronaut";
+let pwRegex = /(?=\w{6,})(?=\D*\d\d)/;
+console.log(pwRegex.test(sampleWord));
+console.log(pwRegex.test('astronaut12')); //will be true because string is followed by 2 consecutive digits
+
+
+
+// check for mixed grouping of characters
+let mixStr = "Pumpkin";
+let mixRegex = /P(engu|umpk)in/g;
+console.log(mixRegex.test(mixStr));
+
+let testing = "Eleanor D. Roosevelt";
+let testingReg = /(Franklin|Eleanor).*Roosevelt/g;
+console.log(testingReg.test(testing));
