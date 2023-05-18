@@ -221,3 +221,29 @@ console.log(mixRegex.test(mixStr));
 let testing = "Eleanor D. Roosevelt";
 let testingReg = /(Franklin|Eleanor).*Roosevelt/g;
 console.log(testingReg.test(testing));
+
+
+
+// Use capture groups to search and replace
+let wrongText = "The sky is silver";
+let silverRegex = /silver/i;
+console.log(wrongText.replace(silverRegex, "blue"));
+
+// You can also access capture groups in the replacement string with dollar signs($)
+console.log("Code Camp".replace(/(\w+)\s(\w+)/, "$2 $1"));
+console.log("Coding Is Fun".replace(/(\w+)\s(\w+)\s(\w+)/, "$3 $1 $2"));
+
+
+let changeStr = "one two three";
+let fixRegex = /(\w+)\s(\w+)\s(\w+)/;
+let replaceText = "$3 $2 $1";
+let changeResult = changeStr.replace(fixRegex, replaceText);
+console.log(changeResult);
+
+
+
+// Remove whitespace from start and end
+let hello = " Hello, World! ";
+let wsRegex = /^(\s+)Hello, World!(\s+)$/;
+let wsResult = hello.replace(wsRegex, "Hello, World!");
+console.log(wsResult);
